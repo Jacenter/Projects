@@ -24,7 +24,12 @@ public class HumanResources {
         }
     }
 
-    public ArrayList<IPayable> sortByIncome (ArrayList<IPayable> unsortedPeople){
-        return unsortedPeople;
+    public void sortByIncome(ArrayList<IPayable> unsortedPeople) {
+        Collections.sort(unsortedPeople, new IncomeComparator());
+        System.out.println("After sorting by pay: ");
+        for (IPayable person : unsortedPeople) {
+            System.out.println(person.getClass().getSimpleName() + " should be paid: " + person.calculatePay());
+        }
     }
 }
+

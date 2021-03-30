@@ -17,10 +17,7 @@ public class CheckCashingPlace {
         IPayable[] peopleThatArePayable = new IPayable[] {entrepreneur1, salariedEmployee1, hourlyEmployee1};
         //array for employees that are payable
         IPayable[] employeesThatArePayable = new IPayable[] {hourlyEmployee1, salariedEmployee1};
-        //
-        ArrayList<Person> sortByIncome = new ArrayList<>();
-
-
+        
         HumanResources humanResources1 = new HumanResources();
 
         humanResources1.issueBadge(employeesArrayList); //issueBadge method on an array of employees
@@ -29,16 +26,16 @@ public class CheckCashingPlace {
 
         humanResources1.payPeople(peopleThatArePayable); //invoke payPeople that takes array of people
 
-        ArrayList<Person> unsortedPeople = new ArrayList<>(); //arrayList of payable people
+        ArrayList<IPayable> unsortedPeople = new ArrayList<>(); //arrayList of payable people
         unsortedPeople.add(hourlyEmployee1); //add object to arraylist
         unsortedPeople.add(entrepreneur1);
         unsortedPeople.add(salariedEmployee1);
 
         System.out.println("\n"); //print out a blank line
 
-        //humanResources1.sortPeopleByIncome(unsortedPeople); //sorts unsortedpeople ArrayList by pay
+        humanResources1.sortByIncome(unsortedPeople); //sorts unsortedpeople ArrayList by pay
 
-        System.out.println("I freakin killed it then take a nice lil 30 minute break once your code has been reviewed by Mikaila");
+        System.out.println("I freakin' killed it then take a nice lil 30 minute break once your code has been reviewed by Mikaila");
 
 
 
